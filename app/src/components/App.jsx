@@ -1,6 +1,6 @@
 import Header from "./Header";
 import MainBody from "./MainBody";
-import '../script.css';
+import '../index.css';
 
 export default function App() {
   return (
