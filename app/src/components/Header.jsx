@@ -2,10 +2,13 @@ import logo from '../img/logo.svg';
 import Menu from './Menu';
 
 export default function Header() {
+    const windowSize = window.innerWidth;
+
     return(
         <nav className="navigation">
             <img src={logo} alt=""/>
-            <Menu translateValor={{transform: `translateX(300px)`}}/>
+            {windowSize < 600 && (<Menu displayMode={{display: 'none'}}/>)}
+            {windowSize > 600 && (<Menu displayMode={{display: 'flex'}}/>)}
         </nav>   
     )
 }

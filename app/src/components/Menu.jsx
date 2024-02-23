@@ -8,7 +8,7 @@ import MenuIcon2 from '../img/icon-close-menu.svg';
 import Button from './Button';
 import { useState } from 'react';
 
-export default function Menu({translateValor}) {
+export default function Menu({displayMode}) {
     const [showMenu,setShowMenu] = useState(false)
     const [showCompanyMenu, setShowCompanyMenu] = useState(false);
     const [sideBar,setSideBar] = useState(true)
@@ -31,7 +31,7 @@ export default function Menu({translateValor}) {
                 <img src={sideBar ? MenuIcon1 : MenuIcon2} alt="" className='menuIcon' onClick={openLateral}/>
              </div>
             <ul className='ul'>
-                <div style={sideBar ? translateValor : {width:'70%'}}>              
+                <div style={sideBar ? displayMode : {width:'70%'}}>              
                     <li className='feature li'>
                         <span onClick={openMenu}>Features <img src={Arrow} /></span>
                         <ul className='menu' style={{display: showMenu ? 'block' : 'none'}}>
